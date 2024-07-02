@@ -65,9 +65,10 @@
     }
 
     &-item {
-      border-bottom: 1px grey dashed;
+      //border-bottom: 1px #ca0912 dashed;
+      //box-shadow: 0px 7px 3px -6px #ff0000;
 
-      &-inner {
+      a {
         display: flex;
         justify-content: space-between;
         align-items: baseline;

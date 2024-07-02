@@ -190,14 +190,14 @@ figure {
 
 em, i, strong {
   // Default
-  color: $light-color-variant;
+  color: black;
 
   @media (prefers-color-scheme: dark) {
-    color: $dark-color-variant;
+    color: white;
   }
 
   @media (prefers-color-scheme: light) {
-    color: $light-color-variant;
+    color: black;
   }
 
   [data-theme=dark] & {
@@ -352,6 +352,7 @@ hr {
   height: 1px;
   // Default
   background: $light-border-color;
+  box-shadow: 0px 0px 4px 1px #ff0000;
 
   @media (prefers-color-scheme: dark) {
     background: $dark-border-color;
