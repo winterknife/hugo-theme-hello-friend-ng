@@ -13,25 +13,26 @@
                 <div class="posts-group">
                     <div class="post-year">{{ .Key }}</div>
 
-                <ul class="posts-list">
-                    {{ range .Pages }}
-                        <li class="post-item">
-                            <a href="{{.Permalink}}" class="post-item-inner">
-                                <span class="post-title">{{.Title}}</span>
-                                <span class="post-day">
-                                    {{ if .Site.Params.dateformShort }}
-                                        {{ time.Format .Site.Params.dateformShort .Date }}
-                                    {{ else }}
-                                        {{ time.Format "Jan 2" .Date }}
-                                    {{ end }}
-                                </span>
-                            </a>
-                            <hr>
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
-        {{ end }}
-    {{ partial "pagination-list.html" . }}
-    </main>
+                    <ul class="posts-list">
+                        {{ range .Pages }}
+                            <li class="post-item">
+                                <a href="{{.Permalink}}" class="post-item-inner">
+                                    <span class="post-title">{{.Title}}</span>
+                                    <span class="post-day">
+                                        {{ if .Site.Params.dateformShort }}
+                                            {{ time.Format .Site.Params.dateformShort .Date }}
+                                        {{ else }}
+                                            {{ time.Format "Jan 2" .Date }}
+                                        {{ end }}
+                                    </span>
+                                </a>
+                                <hr>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            {{ end }}
+        {{ partial "pagination-list.html" . }}
+        </main>
+    </div>
 {{ end }}
