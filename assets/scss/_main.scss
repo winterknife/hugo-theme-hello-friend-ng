@@ -208,7 +208,7 @@ em, i, strong {
   }
 }
 
-code {
+> code {
   font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
   font-display: auto;
   font-feature-settings: normal;
@@ -255,7 +255,7 @@ pre {
     word-wrap: break-word;
   }
 
-  code {
+  > .code {
     background: none !important;
     margin: 0;
     padding: 0;
@@ -333,12 +333,25 @@ ol ol {
   text-align: center;
 }
 
-.content {
+.content-center {
   display: flex;
   flex-direction: column;
   flex: 1 auto;
   align-items: center;
   justify-content: center;
+  margin: 0;
+
+  @media #{$media-size-phone} {
+    margin-top: 0;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 auto;
+  align-items: center;
+  justify-content: start;
   margin: 0;
 
   @media #{$media-size-phone} {
@@ -431,5 +444,5 @@ hr {
 
 // Prism JS Additionals
 .highlight {
-  margin: 30px auto;
+  margin: 10px auto;
 }
